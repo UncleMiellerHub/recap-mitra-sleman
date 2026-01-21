@@ -1,0 +1,23 @@
+{
+  "name": "Disdukcapil Sleman",
+  "short_name": "Disdukcapil",
+  "description": "Layanan Disdukcapil Kabupaten Sleman",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#ffffff",
+  "theme_color": "#1a73e8",
+  "icons": [
+    {
+      "src": "data/Asset/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "data/Asset/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

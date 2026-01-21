@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Disdukcapil Sleman</title>
+
+<!-- PWA -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1a73e8">
+
+<!-- CSS -->
+<link rel="stylesheet" href="css/style.css">
+
+<!-- JS -->
+<script src="js/app.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <div class="header-wrapper">
+        <img src="data/Asset/img/Logo.png"
+             alt="Logo Pemkab Sleman"
+             class="logo">
+        <div class="title-area">
+            <h1>Dinas Kependudukan dan Pencatatan Sipil</h1>
+            <span>Kabupaten Sleman</span>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+
+    <a href="data/Kelahiran.html" class="service">
+        <div class="icon-circle blue">👶</div>
+        <span>Layanan Akta Kelahiran</span>
+    </a>
+
+    <a href="data/Kematian.html" class="service">
+        <div class="icon-circle red">🕊️</div>
+        <span>Layanan Akta Kematian</span>
+    </a>
+
+</div>
+
+<footer>
+    © 2026 Disdukcapil Kabupaten Sleman — Melayani dengan Profesional dan Integritas
+</footer>
+
+<!-- SERVICE WORKER -->
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./service-worker.js');
+}
+</script>
+
+</body>
+</html>

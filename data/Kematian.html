@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Layanan Akta Kematian - Disdukcapil Sleman</title>
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        background: #f4f6f9;
+        color: #333;
+    }
+    header {
+        text-align: center;
+        padding: 20px;
+        background: linear-gradient(135deg, #1a73e8, #004aad);
+        color: white;
+        font-size: 1.5em;
+        font-weight: bold;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    .container {
+        max-width: 1100px;
+        margin: auto;
+        padding: 40px 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 30px;
+        text-align: center;
+    }
+    .symbol {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: #333;
+        transition: transform 0.3s ease;
+    }
+    .icon-circle {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 2.5em;
+        margin-bottom: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    }
+    .symbol:hover .icon-circle {
+        transform: rotate(10deg) scale(1.15);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        filter: brightness(1.2);
+    }
+    .symbol span {
+        font-weight: bold;
+        font-size: 1em;
+        margin-top: 5px;
+    }
+    .blue { background: #1a73e8; }
+    .gold { background: linear-gradient(135deg, #d4af37, #b8860b); }
+    .green { background: #4caf50; }
+    .red { background: #e53935; }
+    .back-btn {
+        display: inline-block;
+        margin: 30px auto;
+        padding: 12px 20px;
+        background: #555;
+        color: white;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background 0.3s;
+    }
+    .back-btn:hover {
+        background: #333;
+    }
+    .btn-container {
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    Layanan Akta Kematian - Disdukcapil Sleman
+</header>
+
+<div class="container">
+    <a href="https://docs.google.com/spreadsheets/d/1xq3mPZRQAFnz9f3zRn5IBmxbiNU8MAdJSXkvT0LuD8s/edit?gid=0#gid=0/edit" target="_blank" class="symbol">
+        <div class="icon-circle blue">📄</div>
+        <span>Kematian Rutin & Terlambat (Offline Mitra)</span>
+    </a>
+
+    <a href="https://docs.google.com/spreadsheets/d/1K35yFEbevKbGL-SZ7GeJNU5rcRk_1g_2v5tXluwQHp4/edit?gid=0#gid=0/edit" target="_blank" class="symbol">
+        <div class="icon-circle gold">🏠</div>
+        <span>Lukadesi</span>
+    </a>
+
+    <a href="https://docs.google.com/spreadsheets/d/1r8vuTrT23SeLqQ4sZXfOgPgP5YCQD10uoGE4zYzql6Q/edit?gid=0#gid=0/edit" target="_blank" class="symbol">
+        <div class="icon-circle green">🌐</div>
+        <span>Online Mitra</span>
+    </a>
+
+    <a href="https://docs.google.com/spreadsheets/d/1IDX9jjkwvqpmoNxCnlt3lsbbEmpeNkdhb9Y5H8DVSp0/edit?gid=0#gid=0/edit" target="_blank" class="symbol">
+        <div class="icon-circle red">⏳</div>
+        <span>Detail Pending</span>
+    </a>
+</div>
+
+<div class="btn-container">
+    <a href="index.html" class="back-btn">⬅ Kembali ke Halaman Awal</a>
+</div>
+
+</body>
+</html>

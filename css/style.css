@@ -1,0 +1,233 @@
+/* ===============================
+   GLOBAL / BODY
+   =============================== */
+body {
+  margin: 0;
+  font-family: 'Poppins', system-ui, sans-serif;
+  background: #f4f6f9;
+  color: #333;
+
+  /* Safe area (notch devices) */
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+  padding-bottom: env(safe-area-inset-bottom);
+
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ===============================
+   HEADER
+   =============================== */
+header {
+  background: linear-gradient(135deg, #1a73e8, #004aad);
+  color: white;
+  padding: 20px 30px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+.header-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  width: 70px;
+  height: auto;
+  object-fit: contain;
+}
+
+.title-area h1 {
+  margin: 0;
+  font-size: 1.6em;
+  font-weight: 700;
+}
+
+.title-area span {
+  font-size: 0.95em;
+  opacity: 0.9;
+}
+
+/* ===============================
+   CONTENT
+   =============================== */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 70px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 60px;
+  text-align: center;
+}
+
+.service {
+  text-decoration: none;
+  color: #333;
+}
+
+.icon-circle {
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5em;
+  color: white;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.service:hover .icon-circle {
+  transform: scale(1.15) rotate(6deg);
+  box-shadow: 0 16px 35px rgba(0,0,0,0.35);
+}
+
+.service span {
+  display: block;
+  margin-top: 22px;
+  font-size: 1.25em;
+  font-weight: 600;
+}
+
+.blue { background: #1a73e8; }
+.red  { background: #e53935; }
+
+/* ===============================
+   FOOTER
+   =============================== */
+footer {
+  text-align: center;
+  padding: 18px;
+  font-size: 0.85em;
+  color: #666;
+}
+
+/* ==================================================
+   ORIENTATION & RESPONSIVE
+   ================================================== */
+
+/* ---------- MOBILE PORTRAIT ---------- */
+@media (max-width: 767px) and (orientation: portrait) {
+  header {
+    padding: 16px 18px;
+  }
+
+  .logo {
+    width: 54px;
+  }
+
+  .title-area h1 {
+    font-size: 1.2em;
+  }
+
+  .title-area span {
+    font-size: 0.85em;
+  }
+
+  .container {
+    padding: 40px 16px;
+    gap: 36px;
+  }
+
+  .icon-circle {
+    width: 120px;
+    height: 120px;
+    font-size: 2.7em;
+  }
+
+  .service span {
+    font-size: 1.05em;
+  }
+}
+
+/* ---------- MOBILE LANDSCAPE ---------- */
+@media (max-width: 767px) and (orientation: landscape) {
+  header {
+    padding: 12px 20px;
+  }
+
+  .container {
+    padding: 24px 20px;
+    gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .icon-circle {
+    width: 100px;
+    height: 100px;
+    font-size: 2.4em;
+  }
+
+  .service span {
+    font-size: 1em;
+  }
+}
+
+/* ---------- TABLET PORTRAIT ---------- */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .container {
+    max-width: 960px;
+    padding: 60px 24px;
+    gap: 50px;
+  }
+
+  .icon-circle {
+    width: 140px;
+    height: 140px;
+    font-size: 3.2em;
+  }
+
+  .service span {
+    font-size: 1.2em;
+  }
+}
+
+/* ---------- TABLET LANDSCAPE ---------- */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .container {
+    max-width: 1100px;
+    padding: 50px 40px;
+    gap: 60px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .icon-circle {
+    width: 130px;
+    height: 130px;
+    font-size: 3em;
+  }
+
+  .service span {
+    font-size: 1.15em;
+  }
+}
+
+/* ===============================
+   TOUCH DEVICE OPTIMIZATION
+   =============================== */
+@media (hover: none) {
+  .service:hover .icon-circle {
+    transform: none;
+    box-shadow: 0 10px 22px rgba(0,0,0,0.25);
+  }
+
+  .service:active .icon-circle {
+    transform: scale(1.08);
+  }
+}
+
+/* ===============================
+   ACCESSIBILITY (INSTANSI)
+   =============================== */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
