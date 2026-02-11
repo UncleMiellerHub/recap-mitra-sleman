@@ -1,13 +1,15 @@
-const CACHE_NAME = 'disdukcapil-v1';
+const CACHE_NAME = 'disdukcapil-v2';
+
+const BASE_PATH = '/recap-mitra-sleman/';
 
 const ASSETS = [
-  './',
-  './index.html',
-  './css/style.css',
-  './js/app.js',
-  './manifest.json',
-  './data/Kelahiran.html',
-  './data/Kematian.html'
+  BASE_PATH,
+  BASE_PATH + 'index.html',
+  BASE_PATH + 'css/style.css',
+  BASE_PATH + 'js/app.js',
+  BASE_PATH + 'manifest.json',
+  BASE_PATH + 'data/Kelahiran.html',
+  BASE_PATH + 'data/Kematian.html'
 ];
 
 self.addEventListener('install', e => {
@@ -22,3 +24,4 @@ self.addEventListener('fetch', e => {
     caches.match(e.request).then(res => res || fetch(e.request))
   );
 });
+
