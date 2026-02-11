@@ -15,4 +15,16 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('offline', updateStatus);
 
   updateStatus();
-});
+}); 
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/recap-mitra-sleman/service-worker.js')
+      .then(function(registration) {
+        console.log('Service Worker registered:', registration.scope);
+      })
+      .catch(function(error) {
+        console.log('Service Worker failed:', error);
+      });
+  });
+}
